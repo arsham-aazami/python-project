@@ -14,7 +14,7 @@ def roman_numerals(number):
     if 1 <= number <= 10:
        return roman_numerals_dic[number]
     else:
-        return "Error: number is greater than 10"
+        return "Error: number is less than 1 or greater than 10"
 
 
 input_number = int(input("Enter a arbitrary number: "))
