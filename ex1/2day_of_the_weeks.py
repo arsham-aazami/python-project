@@ -14,5 +14,8 @@ def day_of_the_weeks(day):
 
 #taking the user input
 user_input = int(input("Type a number between 1 and 7: "))
-specified_day = day_of_the_weeks(user_input)
-print(specified_day)
+if 1 <= user_input <= 7:
+    specified_day = day_of_the_weeks(user_input)
+    print(specified_day)
+else:
+    print("invalid number for a week day!")
