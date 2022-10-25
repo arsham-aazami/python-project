@@ -1,6 +1,6 @@
 def roman_numerals(number):
     '''
-    (int) -> int
+    (int) -> str
     :param number:
     :return: The numeral version of the numbers within the range of 1 through 10
     '''
