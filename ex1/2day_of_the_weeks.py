@@ -1,5 +1,10 @@
 def day_of_the_weeks(day):
-
+    '''
+    (int) -> str
+    :param day:
+    :return: The corresponding day of the week based on the input number
+    where 1 = monday 2 = tuesday .... 7 = sunday
+    '''
     # using dictionary to assign the integer number to the days of a week
     week_day={
         1: "monday",

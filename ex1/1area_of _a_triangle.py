@@ -1,4 +1,10 @@
 def area_of_a_triangle(base,height):
+    '''
+    (int, int) -> int
+    :param base:
+    :param height:
+    :return: Area of the specified triangle by using its base and height
+    '''
     area = (base * height) / 2
     return area
 

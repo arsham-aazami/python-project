@@ -1,4 +1,9 @@
 def roman_numerals(number):
+    '''
+    (int) -> int
+    :param number:
+    :return: The numeral version of the numbers within the range of 1 through 10
+    '''
     roman_numerals_dic = {
         1: "I",
         2: "II",

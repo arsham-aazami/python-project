@@ -1,4 +1,9 @@
 def age_classifier(age):
+    '''
+    (int) -> str
+    :param age:
+    :return: The string including user age based on the user age
+    '''
     result = ""
     if age <= 1:
         result = "infant"

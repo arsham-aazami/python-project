@@ -1,4 +1,11 @@
 def max_edge_of_a_triangle(side1, side2):
+    '''
+
+    :param side1:
+    :param side2:
+    :return: The maximum value of the third side of the triangle
+    based on the other two sides
+    '''
     maximum_third_side = (side1 + side2) - 1
     return maximum_third_side
 
