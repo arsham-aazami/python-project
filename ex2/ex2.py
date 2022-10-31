@@ -80,13 +80,21 @@ def to_24_hour_clock(hours):
 
 
 ### Write your get_hours function definition here:
-def get_hours():
+def get_hours(seconds):
+    '''
+    (int) -> int
+    :param seconds:
+    :return: the time which has been converted to hours from second
+    '''
+    sec_to_hour = seconds // 3600
+
 
 ### Write your get_minutes function definition here:
+def get_minutes(second):
 
 
 ### Write your get_seconds function definition here:
-
+def get_seconds():
 
 def time_to_utc(utc_offset, time):
     """ (number, float) -> float
