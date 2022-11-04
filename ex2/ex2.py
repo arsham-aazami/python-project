@@ -2,7 +2,7 @@
 # Student code : 4012061003
 
 def seconds_difference(time_1, time_2):
-    """ (number, number) -> number
+	""" (number, number) -> number
 
     Return the number of seconds later that a time in seconds
     time_2 is than a time in seconds time_1.
@@ -16,10 +16,11 @@ def seconds_difference(time_1, time_2):
     >>> seconds_difference(1800.0, 1800.0)
     0.0
     """
-    return time_2 - time_1
+	return time_2 - time_1
+
 
 def hours_difference(time_1, time_2):
-    """ (number, number) -> float
+	""" (number, number) -> float
 
     Return the number of hours later that a time in seconds
     time_2 is than a time in seconds time_1.
@@ -33,11 +34,12 @@ def hours_difference(time_1, time_2):
     >>> hours_difference(1800.0, 1800.0)
     0.0
     """
-    hours_diff = float((time_2 - time_1) / 3600)
-    return hours_diff
+	hours_diff = float((time_2 - time_1) / 3600)
+	return hours_diff
+
 
 def to_float_hours(hours, minutes, seconds):
-    """ (int, int, int) -> float
+	""" (int, int, int) -> float
 
     Return the total number of hours in the specified number
     of hours, minutes, and seconds.
@@ -50,14 +52,15 @@ def to_float_hours(hours, minutes, seconds):
     >>> to_float_hours(1, 0, 36)
     1.01
     """
-    if 0 <= minutes <= 60 and 0 <= seconds <= 60:
-        min_to_hour = minutes / 60
-        sec_to_hour = seconds / 3600
-        total_hours = hours + min_to_hour + sec_to_hour
-        return float(total_hours)
+	if 0 <= minutes <= 60 and 0 <= seconds <= 60:
+		min_to_hour = minutes / 60
+		sec_to_hour = seconds / 3600
+		total_hours = hours + min_to_hour + sec_to_hour
+		return float(total_hours)
+
 
 def to_24_hour_clock(hours):
-    """ (number) -> number
+	""" (number) -> number
 
     hours is a number of hours since midnight. Return the
     hour as seen on a 24-hour clock.
@@ -75,29 +78,41 @@ def to_24_hour_clock(hours):
     >>> to_24_hour_clock(28.5)
     4.5
     """
-    if hours >= 0:
-        return hours % 24
+	if hours >= 0:
+		return hours % 24
 
 
 ### Write your get_hours function definition here:
+hour = 0
+
+
 def get_hours(seconds):
-    '''
+	'''
     (int) -> int
     :param seconds:
     :return: the time which has been converted to hours from second
     '''
-    sec_to_hour = seconds // 3600
+	hour = seconds // 3600
+	return
 
 
 ### Write your get_minutes function definition here:
-def get_minutes(second):
+
+minute = 0
+
+
+def get_minutes():
+	minute = (3800 - (3600 * hour)) // 60
+	return minute
 
 
 ### Write your get_seconds function definition here:
 def get_seconds():
+	second = (3800 - (3600 * hour) - minute * 60)
+
 
 def time_to_utc(utc_offset, time):
-    """ (number, float) -> float
+	""" (number, float) -> float
 
     Return time at UTC+0, where utc_offset is the number of hours away from
     UTC+0.
@@ -115,10 +130,12 @@ def time_to_utc(utc_offset, time):
     >>> time_to_utc(-1, 23.0)
     0.0
     """
-
+	hours_away = time - utc_offset
+	utc_time = hours_away % 24
+	return utc_time
 
 def time_from_utc(utc_offset, time):
-    """ (number, float) -> float
+	""" (number, float) -> float
 
     Return UTC time in time zone utc_offset.
 
@@ -139,7 +156,7 @@ def time_from_utc(utc_offset, time):
     >>> time_from_utc(+1, 23.0)
     0.0
     """
-
-
-
-
+	converted_time = time + utc_offset
+	if converted_time < 0:
+		converted_time += 24
+	return converted_time
