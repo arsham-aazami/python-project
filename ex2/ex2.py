@@ -90,7 +90,7 @@ def get_hours(seconds):
 	'''
     (int) -> int
     :param seconds:
-    :return: the time which has been converted to hours from second
+    :return: The time which has been converted to hours from second
     '''
 	hour = seconds // 3600
 	return hour
@@ -104,7 +104,7 @@ minute = 0
 def get_minutes():
 	'''
 
-	:return:the time in minute after passing one or more hours
+	:return: The time in minute after passing one or more hours
 	'''
 	minute = (3800 - (3600 * get_hours(3800))) // 60
 	return minute
@@ -114,7 +114,7 @@ def get_minutes():
 def get_seconds():
 	'''
 
-	:return: the time in second after passing one or more hours
+	:return: The time in second after passing one or more hours
 	'''
 	second = (3800 - (3600 * get_hours(3800)) - get_minutes() * 60)
 	return second
