@@ -93,7 +93,7 @@ def get_hours(seconds):
     :return: the time which has been converted to hours from second
     '''
 	hour = seconds // 3600
-	return
+	return hour
 
 
 ### Write your get_minutes function definition here:
@@ -102,14 +102,22 @@ minute = 0
 
 
 def get_minutes():
-	minute = (3800 - (3600 * hour)) // 60
+	'''
+
+	:return:the time in minute after passing one or more hours
+	'''
+	minute = (3800 - (3600 * get_hours(3800))) // 60
 	return minute
 
 
 ### Write your get_seconds function definition here:
 def get_seconds():
-	second = (3800 - (3600 * hour) - minute * 60)
+	'''
 
+	:return: the time in second after passing one or more hours
+	'''
+	second = (3800 - (3600 * get_hours(3800)) - get_minutes() * 60)
+	return second
 
 def time_to_utc(utc_offset, time):
 	""" (number, float) -> float
@@ -133,6 +141,7 @@ def time_to_utc(utc_offset, time):
 	hours_away = time - utc_offset
 	utc_time = hours_away % 24
 	return utc_time
+
 
 def time_from_utc(utc_offset, time):
 	""" (number, float) -> float
