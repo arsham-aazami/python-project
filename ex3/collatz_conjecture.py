@@ -4,7 +4,9 @@ def collatz_conjecture(number):
     :param number:
     :return: the number of steps that repeatedly performed
     """
+
 	num_of_step = 0
+
 	if number > 0:
 		while number != 1:
 			if number % 2 == 0:
