@@ -14,3 +14,5 @@ def multi_division(a, b, c):
 
 
 multi_division(42, 5, 10)
+
+
