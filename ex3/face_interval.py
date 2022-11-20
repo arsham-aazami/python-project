@@ -9,11 +9,9 @@ def face_interval(int_list):
     for number in int_list:
         if number == interval:
             face = ":)"
-            break
         else:
             face = ":("
-            break
     return face
 
 
-face_interval([2, 32, 1, 6])
+print(face_interval([2, 32, 1, 6, 31]))
