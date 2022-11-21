@@ -8,9 +8,7 @@ def multi_division(a, b, c):
     """
 
    
-    for i in range(b):
-        a *= 2 
-    print(a)
+    for i in range(b): a *= 2 
 
     if a % c == 0:
         return True
