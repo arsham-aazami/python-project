@@ -14,4 +14,4 @@ def face_interval(int_list):
     return face
 
 
-print(face_interval([2, 32, 1, 6, 31]))
+face_interval([2, 32, 1, 6, 31])

@@ -19,4 +19,4 @@ def collatz_conjecture(number):
 	return num_of_step
 
 
-print(collatz_conjecture(10))
+collatz_conjecture(10)

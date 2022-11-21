@@ -28,4 +28,5 @@ def robot_path(direction_list):
     else:
         return False
 
+
 robot_path(['e', 'e', 'n', 'w', 'n'])
