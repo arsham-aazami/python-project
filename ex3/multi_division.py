@@ -9,7 +9,7 @@ def multi_division(a, b, c):
 
    
     for i in range(b):
-        a += a
+        a *= 2 
     print(a)
 
     if a % c == 0:
