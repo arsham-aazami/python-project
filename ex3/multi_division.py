@@ -6,10 +6,7 @@ def multi_division(a, b, c):
         :param c:
         :return: A boolean if "a" time "b" is divisible by "c" function returns True otherwise returns False
     """
-
-   
-    for i in range(b): a *= 2 
-
+    a = a * b
     if a % c == 0:
         return True
     else:
