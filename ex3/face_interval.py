@@ -6,10 +6,13 @@ def face_interval(int_list):
     """
     interval = max(int_list) - min(int_list)
     face = ""
-    for number in int_list:
-        if number == interval:
+    if len(int_list) == 0:
+      face = ":/"
+    else:
+      for number in int_list:
+         if number == interval:
             face = ":)"
-        else:
+         else:
             face = ":("
     return face
 
