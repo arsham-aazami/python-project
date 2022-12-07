@@ -7,7 +7,7 @@ with open("datas.txt") as datas:
 
 
 position_dic = {
-	"a": -195,q
+	"a": -195,
 	"b": -135,
 	"c": -75,
 	"d": -15,
